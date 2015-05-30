@@ -8,15 +8,13 @@ import org.junit.Test;
  * @author Greg Williamson
  * @version 0.1
  */
-public class DriverLicenseTest
-{
+public class DriverLicenseTest {
 
     /**
      * Test method for {@link card.DriverLicense#isExpired()}.
      */
     @Test
-    public void testIsExpired() throws Exception
-    {
+    public final void testIsExpired() throws Exception {
         DriverLicense d = new DriverLicense("Sam", 2013);
         assertEquals(true, d.isExpired());
 
@@ -28,8 +26,7 @@ public class DriverLicenseTest
      * Test method for {@link card.DriverLicense#format()}.
      */
     @Test
-    public void testFormat() throws Exception
-    {
+    public final void testFormat() throws Exception {
         DriverLicense d = new DriverLicense("Sam", 2013);
         assertEquals("Card holder: Sam Expiration: 2013", d.format());
     }
@@ -38,8 +35,7 @@ public class DriverLicenseTest
      * Test method for {@link card.DriverLicense#toString()}.
      */
     @Test
-    public void testToString() throws Exception
-    {
+    public final void testToString() throws Exception {
         DriverLicense d = new DriverLicense("Sam", 2013);
         assertEquals("DriverLicense[name=Sam][expires=2013]", d.toString());
     }

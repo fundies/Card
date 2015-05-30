@@ -4,18 +4,16 @@ package card;
  * @author Greg Williamson
  * @version 0.1
  */
-public class IDCard extends Card
-{
+public class IDCard extends Card {
     private String id;
 
     /**
-     * Default Constructor
-     * 
+     * Default Constructor.
+     *
      * @param n name
      * @param iden id
      */
-    public IDCard(String n, String iden)
-    {
+    public IDCard(final String n, final String iden) {
         super(n);
         id = iden;
     }
@@ -26,8 +24,7 @@ public class IDCard extends Card
      * @see card.Card#format()
      */
     @Override
-    public String format()
-    {
+    public final String format() {
         return super.format() + " ID: " + id;
     }
 
@@ -37,8 +34,7 @@ public class IDCard extends Card
      * @see card.Card#toString()
      */
     @Override
-    public String toString()
-    {
+    public final String toString() {
         return "IDCard[name=" + name + "][ID=" + id + "]";
     }
 

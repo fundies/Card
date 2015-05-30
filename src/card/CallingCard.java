@@ -4,23 +4,21 @@ package card;
  * @author Greg Williamson
  * @version 0.1
  */
-public class CallingCard extends Card
-{
+public class CallingCard extends Card {
     private String cardNum;
     private String pin;
 
     /**
-     * Default Constructor
-     * 
+     * Default Constructor.
+     *
      * @param n name
-     * @param cardNum card number
-     * @param pin pin
+     * @param c card number
+     * @param p pin
      */
-    public CallingCard(String n, String cardNum, String pin)
-    {
+    public CallingCard(final String n, final String c, final String p) {
         super(n);
-        this.cardNum = cardNum;
-        this.pin = pin;
+        cardNum = c;
+        pin = p;
     }
 
     /*
@@ -29,8 +27,7 @@ public class CallingCard extends Card
      * @see card.Card#format()
      */
     @Override
-    public String format()
-    {
+    public final String format() {
         return super.format() + " Card Number: " + cardNum + " Pin: " + pin;
     }
 
@@ -40,8 +37,7 @@ public class CallingCard extends Card
      * @see card.Card#toString()
      */
     @Override
-    public String toString()
-    {
+    public final String toString() {
         return "CallingCard[name=" + name + "][number=" + cardNum + ",pin="
                 + pin + "]";
     }

@@ -8,17 +8,15 @@ import org.junit.Test;
  * @author Greg Williamson
  * @version 0.1
  */
-public class BillfoldTest
-{
+public class BillfoldTest {
     /**
      * Test method for {@link card.Billfold#formatCards()}.
      */
     @Test
-    public void testFormatCards() throws Exception
-    {
+    public final void testFormatCards() throws Exception {
         Billfold inst = new Billfold();
         assertEquals("", inst.formatCards());
-        
+
         inst.addCard(new CallingCard("John Smith", "80085", "1234"));
         inst.addCard(new IDCard("Fred Johnson", "3098"));
 
@@ -33,8 +31,7 @@ public class BillfoldTest
      * Test method for {@link card.Billfold#getExpiredCardCount()}.
      */
     @Test
-    public void testGetExpiredCardCount() throws Exception
-    {
+    public final void testGetExpiredCardCount() throws Exception {
         Billfold inst = new Billfold();
         inst.addCard(new CallingCard("John Smith", "80085", "1234"));
         inst.addCard(new DriverLicense("Abby Anderson", 2013));

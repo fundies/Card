@@ -8,15 +8,13 @@ import org.junit.Test;
  * @author Greg Williamson
  * @version 0.1
  */
-public class CardTest
-{
+public class CardTest {
 
     /**
      * Test method for {@link card.Card#getName()}.
      */
     @Test
-    public void testGetName() throws Exception
-    {
+    public final void testGetName() throws Exception {
         Card c = new Card();
         assertEquals("", c.getName());
     }
@@ -25,8 +23,7 @@ public class CardTest
      * Test method for {@link card.Card#isExpired()}.
      */
     @Test
-    public void testIsExpired() throws Exception
-    {
+    public final void testIsExpired() throws Exception {
         Card c = new Card("Greg");
         assertEquals(false, c.isExpired());
     }
@@ -35,8 +32,7 @@ public class CardTest
      * Test method for {@link card.Card#format()}.
      */
     @Test
-    public void testFormat() throws Exception
-    {
+    public final void testFormat() throws Exception {
         Card c = new Card("Greg");
         assertEquals("Card holder: Greg", c.format());
     }
@@ -45,8 +41,7 @@ public class CardTest
      * Test method for {@link card.Card#toString()}.
      */
     @Test
-    public void testToString() throws Exception
-    {
+    public final void testToString() throws Exception {
         Card c = new Card("Greg");
         assertEquals("Card[name=Greg]", c.toString());
     }
@@ -55,8 +50,7 @@ public class CardTest
      * Test method for {@link card.Card#equals(card.Card)}.
      */
     @Test
-    public void testEqualsCard() throws Exception
-    {
+    public final void testEqualsCard() throws Exception {
         Card card1;
         Card card2;
 
@@ -80,8 +74,7 @@ public class CardTest
      * Test method for {@link card.Card#equals(java.lang.Object)}.
      */
     @Test
-    public void testEqualsObject() throws Exception
-    {
+    public final void testEqualsObject() throws Exception {
         Card c = new Card("Greg");
         Object o = new Object();
         assertEquals(false, c.equals(o));

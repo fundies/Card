@@ -4,90 +4,82 @@ package card;
  * @author Greg Williamson
  * @version 0.1
  */
-public class Card
-{
+public class Card {
+
     /**
-     * Card Holder name
+     * Name.
      */
     protected String name;
 
     /**
-     * Default Constructor
+     * Default Constructor.
      */
-    public Card()
-    {
+    public Card() {
         name = "";
     }
 
     /**
-     * Constructor with name
-     * 
+     * Constructor with name.
+     *
      * @param n name
      */
-    public Card(String n)
-    {
+    public Card(final String n) {
         name = n;
     }
 
     /**
-     * Get Name
-     * 
+     * Get Name.
+     *
      * @return name
      */
-    public String getName()
-    {
+    public final String getName() {
         return name;
     }
 
     /**
-     * Get Expired
-     * 
+     * Get Expired.
+     *
      * @return is expired
      */
-    public boolean isExpired()
-    {
+    public boolean isExpired() {
         return false;
     }
 
     /**
-     * Returns readable string
-     * 
+     * Returns readable string.
+     *
      * @return Card holder: name
      */
-    public String format()
-    {
+    public String format() {
         return "Card holder: " + name;
     }
 
     /**
      * Returns a different string? (really what's the point?)
-     * 
+     *
      * @return card info
      */
-    public String toString()
-    {
+    public String toString() {
         return "Card[name=" + name + "]";
     }
 
     /**
-     * Check if two cards are the same
-     * 
+     * Check if two cards are the same.
+     *
      * @param card card
      * @return is equal
      */
-    public boolean equals(Card card)
-    {
+    public final boolean equals(final Card card) {
         return (this.toString().equals(card.toString()));
     }
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see java.lang.Object#equals(java.lang.Object)
      */
     @Override
-    public boolean equals(Object o)
-    {
+    public final boolean equals(final Object o) {
         return false;
     }
 }

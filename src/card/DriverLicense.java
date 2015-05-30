@@ -7,18 +7,16 @@ import java.util.GregorianCalendar;
  * @author Greg Williamson
  * @version 0.1
  */
-public class DriverLicense extends Card
-{
+public class DriverLicense extends Card {
     private int expiration;
 
     /**
-     * Default Constructor
-     * 
+     * Default Constructor.
+     *
      * @param n name
      * @param exp expiration
      */
-    public DriverLicense(String n, int exp)
-    {
+    public DriverLicense(final String n, final int exp) {
         super(n);
         expiration = exp;
     }
@@ -29,8 +27,7 @@ public class DriverLicense extends Card
      * @see card.Card#format()
      */
     @Override
-    public String format()
-    {
+    public final String format() {
         return super.format() + " Expiration: " + expiration;
     }
 
@@ -40,8 +37,7 @@ public class DriverLicense extends Card
      * @see card.Card#isExpired()
      */
     @Override
-    public boolean isExpired()
-    {
+    public final boolean isExpired() {
         GregorianCalendar calendar = new GregorianCalendar();
         return (expiration < calendar.get(Calendar.YEAR));
     }
@@ -52,8 +48,7 @@ public class DriverLicense extends Card
      * @see card.Card#toString()
      */
     @Override
-    public String toString()
-    {
+    public final String toString() {
         return "DriverLicense[name=" + name + "][expires=" + expiration + "]";
     }
 
